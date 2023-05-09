@@ -68,7 +68,17 @@ function App() {
               <td>{currentContact.popularity}</td>
               {currentContact.wonEmmy ? <td>🏆</td> : <td></td>}
               {currentContact.wonOscar ? <td>🏆</td> : <td></td>}
-              <button>Delete</button>
+              <td>
+                <button
+                  onClick={() =>
+                    [...newArray].filter(
+                      (contact) => contact.name !== "Anthony Hopkins"
+                    )
+                  }
+                >
+                  Delete
+                </button>
+              </td>
             </tr>
           ))}
         </tbody>
